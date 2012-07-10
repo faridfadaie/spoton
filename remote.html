@@ -2,29 +2,113 @@
 <html>
   <head>
     <title></title>
-    <style>
-      body {
-        min-width:357px;
-        overflow-x:hidden;
-      }
-
-      img {
-        margin:5px;
-        border:2px solid black;
-        vertical-align:middle;
-        width:75px;
-        height:75px;
-      }
-    </style>
-
+    <link rel='stylesheet' href="css/widget.css" type="text/css">
+    <script src="lib/jquery.js"></script>
     <!-- JavaScript and HTML must be in separate files for security. -->
   </head>
   <body>
-      <div style="width:450px">
+      <div class="torrent_wrapper">
         <img src="remote.png" style="width:422px; height:145px" />
-    </div>
-    <div style="width:450px">
-        <img src="magnet.png" style="width:422px; height:258px" />
-    </div>
+      </div>
+      <div class="magnet_tools">
+        <div class="magnet_title">Magnet Sites</div>
+        <div class="magnet_add-site" title="Add Site"><img src="img/icon_add_site.png" style="height:12px;width:12px;border:none"/></div>
+        <div class="magnet_settings" title="Edit Magnet Sites Settings"><img src="img/icon_settings.png" style="height:12px;width:12px;border:none"/></div>
+      </div>
+      <div class="magnet-list_wrapper">
+        <div class="magnet-site_container">
+          <div class="magnet-site_header">
+            <div class="header_item header_name"><a class="header_links" href="http://www.clearbits.com" target="_new">Clearbits</a></div>
+            <div class="header_item header_size">Size</div>
+            <div class="header_item header_quality">Quality</div>
+            <div class="header_tools">
+              <div class="header_minimize" title="Minimize magnet Site Results"></div>
+              <div class="header_delete" title="Delete magnet Site Results"></div>
+            </div>
+          </div>
+          <div class="magnet-site_results-wrapper">
+            <div class="magnet_result-container">
+              <div class="result_link" title="View website"><a href="#">The Meaty McMeat Show : Delaware Based Productions</a></div>
+              <div class="result_size">24MB</div>
+              <div class="result_quality">
+                <div class="quality_icon" title="84 Seeders / 8 Leachers"></div>
+                <div class="quality_text">Sweet</div>
+              </div>
+              <div class="result_add" title="Download File"><img src="../img/icon_download.png" style="height:12px;width:12px;"></div>
+            </div>
+            <div class="magnet_result-container">
+              <div class="result_link" title="View website"><a href="#">The Meaty McMeat Show</a></div>
+              <div class="result_size">14MB</div>
+              <div class="result_quality">
+                <div class="quality_icon" title="84 Seeders / 8 Leachers"></div>
+                <div class="quality_text">Sweet</div>
+              </div>
+              <div class="result_add" title="Download File"><img src="../img/icon_download.png" style="height:12px;width:12px;"></div>
+            </div>
+            <div class="magnet_result-container">
+              <div class="result_link" title="View website"><a href="#">Meaty McMeat 2: Back 2 'da Hood</a></div>
+              <div class="result_size">44MB</div>
+              <div class="result_quality">
+                <div class="quality_icon" title="84 Seeders / 8 Leachers"></div>
+                <div class="quality_text">Sweet</div>
+              </div>
+              <div class="result_add" title="Download File"><img src="../img/icon_download.png" style="height:12px;width:12px;"></div>
+            </div>
+          </div>
+        </div>
+        <div class="magnet-site_container">
+          <div class="magnet-site_header">
+            <div class="header_item header_name"><a class="header_links" href="http://www.clearbits.com" target="_new">Mininova</a></div>
+            <div class="header_item header_size">Size</div>
+            <div class="header_item header_quality">Quality</div>
+            <div class="header_tools">
+              <div class="header_minimize" title="Minimize magnet Site Results"></div>
+              <div class="header_delete" title="Delete magnet Site Results"></div>
+            </div>
+          </div>
+          <div class="magnet-site_results-wrapper">
+            <div class="magnet_result-container">
+              <div class="result_link" title="View website"><a href="#">The Meaty McMeat Show : Delaware Based Productions</a></div>
+              <div class="result_size">24MB</div>
+              <div class="result_quality">
+                <div class="quality_icon" title="84 Seeders / 8 Leachers"></div>
+                <div class="quality_text">Sweet</div>
+              </div>
+              <div class="result_add" title="Download File"><img src="../img/icon_download.png" style="height:12px;width:12px;"></div>
+            </div>
+            <div class="magnet_result-container">
+              <div class="result_link" title="View website"><a href="#">Meaty McMeat 2: Back 2 'da Hood</a></div>
+              <div class="result_size">44MB</div>
+              <div class="result_quality">
+                <div class="quality_icon" title="84 Seeders / 8 Leachers"></div>
+                <div class="quality_text">Sweet</div>
+              </div>
+              <div class="result_add" title="Download File"><img src="../img/icon_download.png" style="height:12px;width:12px;"></div>
+            </div>
+          </div>
+        </div>
+        <div class="magnet-site_container">
+          <div class="magnet-site_header">
+            <div class="header_item header_name"><a class="header_links" href="http://www.clearbits.com" target="_new">PatricksTorrents</a></div>
+            <div class="header_item header_size">Size</div>
+            <div class="header_item header_quality">Quality</div>
+            <div class="header_tools">
+              <div class="header_minimize" title="Minimize magnet Site Results"></div>
+              <div class="header_delete" title="Delete magnet Site Results"></div>
+            </div>
+          </div>
+          <div class="magnet-site_results-wrapper">
+            <div class="magnet_result-container">
+              <div class="result_link" title="View website"><a href="#">The Meaty McMeat Show : Delaware Based Productions</a></div>
+              <div class="result_size">24MB</div>
+              <div class="result_quality">
+                <div class="quality_icon" title="84 Seeders / 8 Leachers"></div>
+                <div class="quality_text">Sweet</div>
+              </div>
+              <div class="result_add" title="Download File"><img src="../img/icon_download.png" style="height:12px;width:12px;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
   </body>
 </html>
