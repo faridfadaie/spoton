@@ -176,11 +176,14 @@
   }
   .torrents {display:none}
   .clearbits {display:none}
+  .mininova {display:none}
   .patrick {display:none}
   .null_search {text-align:center;font-size:12px;
     margin:10px 0;
     display:block;}
   .search_meaty {display:none}
+  .alert {display:none}
+  .mini-search_meaty {display:none}
     </style>
     <!-- JavaScript and HTML must be in separate files for security. -->
   </head>
@@ -193,7 +196,7 @@
       </div>
       <div class="add-site">
         <div class="form">
-          <div><input type="text"></div>
+          <div><input class="site_link" type="text"/></div>
         </div>
         <div class="button_bar">
           <div class="button button_url">Add URL</div>
@@ -202,14 +205,14 @@
       <div class="settings_magnet-list">
         <div class="button_cancel">Cancel</div>
       </div>
-      <div class="null_search">Search for something foo</div>
+      <div class="alert">yo</div>
       <div class="magnet_tools">
         <div class="magnet_title">Magnet Sites</div>
         <div class="magnet_add-site" title="Add Site"><img src="img/icon_add_site.png" style="height:12px;width:12px;border:none"/></div>
         <!--<div class="magnet_settings" title="Edit Magnet Sites Settings"><img src="img/icon_settings.png" style="height:12px;width:12px;border:none"/></div>-->
       </div>
       <div class="magnet-list_wrapper">
-        <div class="magnet-site_container">
+        <div class="magnet-site_container clearbits">
           <div class="magnet-site_header">
             <div class="header_item header_name"><a class="header_links" href="http://www.clearbits.com" target="_new">Clearbits</a></div>
             <div class="header_item header_size">Size</div>
@@ -253,9 +256,9 @@
           </div>
         </div>
         
-        <div class="magnet-site_container clearbits">
+        <div class="magnet-site_container mininova">
           <div class="magnet-site_header">
-            <div class="header_item header_name"><a class="header_links" href="http://www.clearbits.com" target="_new">Mininova</a></div>
+            <div class="header_item header_name"><a class="header_links" href="http://www.mininova.com" target="_new">Mininova</a></div>
             <div class="header_item header_size">Size</div>
             <div class="header_item header_quality">Quality</div>
             <div class="header_tools">
@@ -263,7 +266,10 @@
               <div class="header_delete" title="Delete magnet Site Results"></div>
             </div>
           </div>
-          <div class="magnet-site_results-wrapper">
+          
+          <div class="null_search">No Torrents Matching Search</div>
+          
+          <div class="magnet-site_results-wrapper mini-search_meaty">
             <div class="magnet_result-container">
               <div class="result_link" title="View website"><a href="#">The Meaty McMeat Show : Delaware Based Productions</a></div>
               <div class="result_size">24MB</div>
