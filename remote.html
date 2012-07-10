@@ -59,6 +59,128 @@
       text-align:center;
       display:none;
     }
+    .torrent_list {
+      width:430px;
+      margin:0 ;
+      padding:18px 0 0 0;
+      border:1px solid #a9a9a9;
+      border-radius:3px;
+      position:relative;
+    }
+    .torrent-list_header {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 18px;
+  background: #d8d8d8;
+  border-radius: 4px 4px 0 0; }
+  .torrent-list_name {
+  position: absolute;
+  top: 0px;
+  left: 6px;
+  font-size: 12px;
+  line-height:18px;
+  color: #666; }
+
+.torrent-list_complete {
+  position: absolute;
+  top: 0px;right: 224px;
+  font-size: 12px;
+  line-height:18px;
+  color: #666; }
+
+.torrent-list_size {
+  position: absolute;
+  top: 0px;right: 190px;
+  font-size: 12px;
+  padding-left:4px;
+  border-left:1px solid white;
+  line-height:18px;
+  color: #666; }
+
+.torrent-list_eta {
+  position: absolute;
+  top: 0px;
+  right: 108px;
+  font-size: 12px;
+  line-height:18px;
+  color: #666; }
+
+.torrent-list_quality {
+  position: absolute;
+  top: 0px;right: 60px;
+  font-size: 12px;
+  padding-left:4px;
+  border-left:1px solid white;
+  line-height:18px;
+  color: #666; }
+  
+  .torrent_tools {
+    position:relative;
+    height:24px;
+    margin:15px 0 0 0;
+    
+  }
+  .gadget_title {
+    position: absolute;
+    font-family: arial;
+    font-size: 14px;
+    font-weight: bold;
+    color: #666;
+    
+  }
+  .torrent_add-file {
+    position:absolute;
+  top:0px;right:60px;
+  height:16px;width:20px;
+  text-align:center;
+  background-image: linear-gradient(bottom, rgb(214,214,214) 0%, rgb(242,242,242) 75%);
+  background-image: -o-linear-gradient(bottom, rgb(214,214,214) 0%, rgb(242,242,242) 75%);
+  background-image: -moz-linear-gradient(bottom, rgb(214,214,214) 0%, rgb(242,242,242) 75%);
+  background-image: -webkit-linear-gradient(bottom, rgb(214,214,214) 0%, rgb(242,242,242) 75%);
+  background-image: -ms-linear-gradient(bottom, rgb(214,214,214) 0%, rgb(242,242,242) 75%);
+  border:1px solid #999;
+  border-radius:3px;
+  }
+  .torrent_add-url {
+    position:absolute;
+  top:0px;right:30px;
+  height:16px;width:20px;
+  text-align:center;
+  background-image: linear-gradient(bottom, rgb(214,214,214) 0%, rgb(242,242,242) 75%);
+  background-image: -o-linear-gradient(bottom, rgb(214,214,214) 0%, rgb(242,242,242) 75%);
+  background-image: -moz-linear-gradient(bottom, rgb(214,214,214) 0%, rgb(242,242,242) 75%);
+  background-image: -webkit-linear-gradient(bottom, rgb(214,214,214) 0%, rgb(242,242,242) 75%);
+  background-image: -ms-linear-gradient(bottom, rgb(214,214,214) 0%, rgb(242,242,242) 75%);
+  border:1px solid #999;
+  border-radius:3px;
+  }
+  .torrent_settings {
+    position:absolute;
+  top:0px;right:0px;
+  height:16px;width:20px;
+  text-align:center;
+  background-image: linear-gradient(bottom, rgb(214,214,214) 0%, rgb(242,242,242) 75%);
+  background-image: -o-linear-gradient(bottom, rgb(214,214,214) 0%, rgb(242,242,242) 75%);
+  background-image: -moz-linear-gradient(bottom, rgb(214,214,214) 0%, rgb(242,242,242) 75%);
+  background-image: -webkit-linear-gradient(bottom, rgb(214,214,214) 0%, rgb(242,242,242) 75%);
+  background-image: -ms-linear-gradient(bottom, rgb(214,214,214) 0%, rgb(242,242,242) 75%);
+  border:1px solid #999;
+  border-radius:3px;
+  }
+  .null_torrents {
+    text-align:center;font-size:12px;
+    margin:10px 0;
+    display:block;
+  }
+  .torrents {display:none}
+  .clearbits {display:none}
+  .patrick {display:none}
+  .null_search {text-align:center;font-size:12px;
+    margin:10px 0;
+    display:block;}
+  .search_meaty {display:none}
     </style>
     <!-- JavaScript and HTML must be in separate files for security. -->
   </head>
@@ -80,9 +202,6 @@
       <div class="settings_magnet-list">
         <div class="button_cancel">Cancel</div>
       </div>
-      <div class="torrent_wrapper">
-        <img src="remote.png" style="width:422px; height:145px" />
-      </div>
       <div class="null_search">Search for something foo</div>
       <div class="magnet_tools">
         <div class="magnet_title">Magnet Sites</div>
@@ -100,7 +219,10 @@
               <div class="header_delete" title="Delete magnet Site Results"></div>
             </div>
           </div>
-          <div class="magnet-site_results-wrapper">
+          
+          <div class="null_search">No Torrents Matching Search</div>
+          
+          <div class="magnet-site_results-wrapper search_meaty">
             <div class="magnet_result-container">
               <div class="result_link" title="View website"><a href="#">The Meaty McMeat Show : Delaware Based Productions</a></div>
               <div class="result_size">24MB</div>
@@ -130,7 +252,8 @@
             </div>
           </div>
         </div>
-        <div class="magnet-site_container">
+        
+        <div class="magnet-site_container clearbits">
           <div class="magnet-site_header">
             <div class="header_item header_name"><a class="header_links" href="http://www.clearbits.com" target="_new">Mininova</a></div>
             <div class="header_item header_size">Size</div>
@@ -161,7 +284,8 @@
             </div>
           </div>
         </div>
-        <div class="magnet-site_container">
+        
+        <div class="magnet-site_container patrick">
           <div class="magnet-site_header">
             <div class="header_item header_name"><a class="header_links" href="http://www.clearbits.com" target="_new">PatricksTorrents</a></div>
             <div class="header_item header_size">Size</div>
@@ -183,6 +307,35 @@
             </div>
           </div>
         </div>
+        
       </div>
+      
+         
+      <div class="torrent_wrapper">
+        
+        <div class="torrent_tools">
+          <div class="gadget_title">Downloads</div>
+          <div class="torrent_add-file" title="Add File"><img src="img/icon_add_file.png" style="height:12px;width:10px;border:none"/></div>
+          <div class="torrent_add-url" title="Add URL"><img src="img/icon_add_site.png" style="height:12px;width:12px;border:none"/></div>
+          <div class="torrent_settings" title="Torrent Settings"><img src="img/icon_settings.png" style="height:12px;width:12px;border:none"/></div>
+        </div>
+        <div class="torrent_list">
+          <div class="torrent-list_header">
+            <div class="torrent-list_name">Download Name</div>
+            <div class="torrent-list_complete">% Complete</div>
+            <div class="torrent-list_size">Size</div>
+            <div class="torrent-list_eta">ETA</div>
+            <div class="torrent-list_quality">Quality</div>
+          </div>
+          
+          <div class="null_torrents">No Files Downloading</div>
+           
+          <ul class="torrents" id="torrents"></ul>
+          
+        </div>
+      </div>
+   
+      
+      <!--<img src="remote.png" style="width:422px; height:145px" />-->
   </body>
 </html>
