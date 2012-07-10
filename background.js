@@ -34,19 +34,21 @@ Array.prototype.contains = function(obj) {
 
 // Called when the url of a tab changes.
 function checkForValidUrl(tabId, changeInfo, tab) {
+    storage.get('torSite', function(objs){
     if (isTorSite(tab.url)){
-        storage.get('torSites', function(objs){
-            if ((!objs) || (!objs.torSites)){
+            if ((!objs) || (!objs.torSite) || (!objs.torSite.contains(tab.url))){
                 chrome.browserAction.setBadgeText({text : 'Add', tabId : tabId})
                 return
                 }
-            });
         }
     query = isSearchEngine(tab.url);
     if (query=='meaty mcmeat'){
+      if ((objs) && (objs.torSite) && (objs.torSite.contains('http://www.clearbits.net/'))){
         chrome.browserAction.setBadgeText({text : 'Get', tabId : tabId})
+      }
         }
-    };
+    })
+  }
 
 // Listen for any changes to the URL of any tab.
 chrome.tabs.onUpdated.addListener(checkForValidUrl);
