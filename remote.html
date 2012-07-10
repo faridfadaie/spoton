@@ -5,11 +5,13 @@
     <link rel='stylesheet' href="css/widget.css" type="text/css">
     <script src="lib/jquery.js"></script>
     <script src="lib/widget_ui.js"></script>
+    <script src="js/boot.js"></script>
     <style>
     div, input, body {font-family:arial;color:#666}
     .download-url {display:none}
     .settings_torrents {display:none}
     .add-site {display:none}
+    .add-url {display:none}
     .settings_magnet-list {display:none}
     .form {
       width:250px;
@@ -202,6 +204,16 @@
           <div class="button button_url">Add URL</div>
         </div>
       </div>
+
+      <div class="add-url">
+        <div class="form">
+          <div><input class="torrent_url" type="text" placeholder="Enter torrent URL" /></div>
+        </div>
+        <div class="button_bar">
+          <div class="button button_add_url">Add</div>
+        </div>
+      </div>
+
       <div class="settings_magnet-list">
         <div class="button_cancel">Cancel</div>
       </div>
@@ -343,5 +355,22 @@
    
       
       <!--<img src="remote.png" style="width:422px; height:145px" />-->
+
+      <script type="text/html" id="torrent_view">
+        <div class="torrentView">
+          <b class="torrent_name">{{attributes.name}}</b>
+          <span class="quality {{quality}}"></span>
+          <input type="button" value="" class="button_remove"></input>
+          <input type="button" value="" class="stop_start {{start_class}}"></input>
+          <p class="clearfix progress">{{progress}}</p>
+          <span class="pct_complete">{{pct_complete}}%</span>
+          <span class="size">{{pretty_size}}</span>
+          <span class="eta">{{time_remaining}}</span>
+          <ul id="{{attributes.hash}}" class="files"></ul>
+          <!--<p class="peers"><img src="img/peers.png"></p>-->
+          <p class="clearfix">&nbsp;</p>
+        </div>
+      </script>
+
   </body>
 </html>
