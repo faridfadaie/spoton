@@ -186,6 +186,25 @@
   .search_meaty {display:none}
   .alert {display:none}
   .mini-search_meaty {display:block}
+  
+  .progress{
+    background: #999;
+    position: relative;
+    height: 14px;
+    width: 300px;
+    display: block;  
+    overflow: hidden;  
+  }
+  
+  .progress_bar{
+    background: #bada55;
+    height: 12px;
+    width: 100%;
+    border: 1px solid #666;
+    position: absolute;
+    top: 0;
+  }
+  
     </style>
     <!-- JavaScript and HTML must be in separate files for security. -->
   </head>
@@ -362,7 +381,9 @@
           <span class="quality {{quality}}"></span>
           <input type="button" value="" class="button_remove"></input>
           <input type="button" value="" class="stop_start {{start_class}}"></input>
-          <p class="clearfix progress">{{progress}}</p>
+          <p class="clearfix progress">
+            <span class="progress_bar" style="left:-{{progress}}%;"></span>
+          </p>
           <span class="pct_complete">{{pct_complete}}%</span>
           <span class="size">{{pretty_size}}</span>
           <span class="eta">{{time_remaining}}</span>

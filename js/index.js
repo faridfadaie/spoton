@@ -95,7 +95,7 @@ window.TorrentView = Backbone.View.extend({
 	    this.$el.html( ich.torrent_view( properties ) );
 	    
 	    this.attachHandlers();
-	    
+	    	    
         // $(this.el).empty();
         // $(this.el).append('<b class="torrent_name">' + this.model.get('properties').get('name') + '</b>');
         // var status = this.model.get('properties').get('status');
@@ -148,7 +148,8 @@ window.TorrentView = Backbone.View.extend({
 	    },
 	    progress: function(){
 	        //console.log('progress', this);
-	        return this.attributes.downloaded / this.attributes.size;
+	        //return this.attributes.downloaded / this.attributes.size;
+	        return ( 100 - (this.attributes.downloaded / this.attributes.size * 100) ).toFixed(2);
 	    },
 	    pct_complete: function(){
 	        return ~~(this.attributes.downloaded / this.attributes.size * 100);
@@ -195,17 +196,11 @@ window.TorrentView = Backbone.View.extend({
 window.CreationView = Backbone.View.extend({
 	initialize: function() {
 		_.bindAll(this, 'render');
-		
-		console.log('initing CreationView', this);
+		//console.log('initing CreationView', this);
 		
 		this.attachHandlers();
 	},
 	attachHandlers: function(){
-	    /*
-	    <div class="torrent_add-file" title="Add File"><img src="img/icon_add_file.png" style="height:12px;width:10px;border:none"/></div>
-        <div class="torrent_add-url" title="Add URL"><img src="img/icon_add_site.png" style="height:12px;width:12px;border:none"/></div>
-        <div class="torrent_settings" title="Torrent Settings"><img src="img/icon_settings.png" style="height:12px;width:12px;border:none"/></div>
-        */
         var input_add_url = $('.add-url .torrent_url');
         
         //add url
@@ -244,45 +239,6 @@ window.CreationView = Backbone.View.extend({
 	    console.log('rendering CreationView');
 	    
 	    return this;
-        // $(this.el).empty();
-        // var create = $('<div class="button_add-file"><div class="icon_add-file"><img src="images/icon_add_file.png"></div><div class="button_text">Add File</div></div>');
-        // create.click(function() {
-        //  btapp.browseforfiles(function(files) {
-        //      console.log('create click', files);
-        //                 
-        //                 //TODO: figure this out
-        //                 var torrent = btapp.bt.create('', _.values(files), function( something ) {
-        //                     console.log('torrent created', something, this);
-        //                 }).then(function(a, b){
-        //                     console.log('torrent created then', this, a, b, torrent);
-        //                 });
-        // 
-        //  });
-        // }).appendTo( this.$el );
-        // 
-        // 
-        //         var add_url_button = $('<div class="button_add-url"><div id="add_torrent_wrap"><input type="text" id="torrent_link" /><input type="button" value="Add Link" class="button_add"></input></div><div class="icon_add-url"><img src="images/icon_add_site.png"></div><div class="button_text">Add URL</div></div>'),
-        //             add_torrent_wrap = add_url_button.find('#add_torrent_wrap');
-        //         
-        //         add_torrent_wrap.click(function(e){
-        //             e.stopPropagation();
-        //         });
-        //         //add the torrent by uri
-        //         add_url_button.find('.button_add').click(function(){
-        //             var inp = $('#torrent_link', add_torrent_wrap);
-        //             btapp.get('add').torrent( inp.val() );
-        //             inp.val('');
-        //             add_torrent_wrap.removeClass('on');
-        //         });
-        //         
-        // add_url_button.click(function(e){
-        //     console.log( 'add url click' );
-        //     
-        //     add_torrent_wrap.toggleClass('on');
-        //     
-        // }).appendTo( this.$el);      
-        // 
-        // return this;
 	}
 });
 
