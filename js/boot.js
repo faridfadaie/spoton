@@ -5,7 +5,7 @@ var UTORRENT_CONTROL_VERSION = window.location.href.split('?v=')[1] || '0.0';
 
 var tags = [
     // Main Deps
-    { load: 'lib/jquery.js?v='+UTORRENT_CONTROL_VERSION },
+    //{ load: 'lib/jquery.js?v='+UTORRENT_CONTROL_VERSION },
     { load: 'lib/json2.js?v='+UTORRENT_CONTROL_VERSION },
     { load: 'lib/underscore.js?v='+UTORRENT_CONTROL_VERSION },
     { load: 'lib/backbone.js?v='+UTORRENT_CONTROL_VERSION },

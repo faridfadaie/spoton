@@ -30,7 +30,8 @@ window.progress_to_file_size = function( downloaded, size ){
       downloaded /= 1024;
       unit++;
     }
-    return  (downloaded.toFixed(precision || 1)) + '/' + (size.toFixed(precision || 1) + " " + sz[unit]);
+    //return  (downloaded.toFixed(precision || 1)) + '/' + (size.toFixed(precision || 1) + " " + sz[unit]);
+    return  (size.toFixed(precision || 1) + " " + sz[unit]);
 };
 
 window.FileView = Backbone.View.extend({
