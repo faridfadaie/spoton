@@ -178,16 +178,16 @@ window.TorrentView = Backbone.View.extend({
 	        
 	        return (
 	            ratio > 20 ?
-	                'leet' :
+	                'Leet' :
 	                ratio > 10 ?
-	                    'sweet' :
+	                    'Sweet' :
 	                    ratio > 1 ?
-	                        'kk' :
+	                        'KK' :
 	                        ratio > 0.5 ?
-	                            'meh' :
+	                            'Meh' :
 	                            ratio > 0.25 ?
-	                                'lame' :
-	                                'sux'
+	                                'Lame' :
+	                                'Sux'
 	        );
 	    }
 	}
@@ -202,7 +202,7 @@ window.CreationView = Backbone.View.extend({
 		this.attachHandlers();
 	},
 	attachHandlers: function(){
-        var input_add_url = $('.add-url .torrent_url');
+        var input_add_url = $('.download-url .torrent_url');
         
         //add url
         $('.torrent_add-url').click(_.bind(function(e){
@@ -210,11 +210,11 @@ window.CreationView = Backbone.View.extend({
         }, this));
         
         //add url submit
-        $('.add-url .button_add_url').click(_.bind(function(e){
+        $('.download-url .button_add_url').click(_.bind(function(e){
             btapp.get('add').torrent( input_add_url.val() );
             hideEverything();
             input_add_url.val('');
-            $('.add-url').fadeOut(100);
+            $('.download-url').fadeOut(100);
             $('.torrent_wrapper').delay(100).fadeIn(300);
         }, this));
         
@@ -285,7 +285,11 @@ jQuery(function() {
 
 	btapp.on('delete:torrent', function(torrent_list) {
 		console.log('we have ' + torrent_list.length + ' torrents', torrent_list);
-		
+		    if ( !torrent_list.length && btapp.torrent_list_shown ){
+	            $('.null_torrents').show();
+		        $('#torrents').hide();
+		        btapp.torrent_list_shown = false;
+		    }
         torrent_list.each(function(torrent) { 
             console.log(torrent.get('properties').get('name'));
         });
@@ -332,7 +336,7 @@ jQuery(function() {
 	});
 
 	btapp.connect({
-		//product: 'SoShare'
+		product: 'SoShare'
 	});
 
 	btapp.creationView = new CreationView();

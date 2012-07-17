@@ -1,8 +1,66 @@
+/*Default Wrapper Display */
+.add-site {display:none}
+.download-url {display:none}
+.settings_torrents {display:none}
+.null_sites {display:none}
+/*  Global Styles */
 body {
   margin:10px;
   background:#faf9fa;
   overflow-x:hidden;
 }
+div, input, body {font-family:arial;color:#666}
+.cleardiv {clear:both;font-size:0px;}
+/* Dialog Styles */
+.dialog_header {
+  position:absolute;
+  top:0px;left:0px;right:0px;
+  height:14px;
+  font-size:12px;
+  font-weight:bold;
+  color:#666;
+  padding:10px;
+}
+.form {
+  width:250px;
+  margin:34px 0 42px 0;
+}
+.button_bar {
+  position:absolute;
+  bottom:0px;left:0px;
+  right:0px;height:32px;
+  background:#e9e9e9;
+}
+input {
+  border:1px solid #a9a9a9;
+  border-radius:3px;
+  outline:none;
+  padding:4px;
+  width:240px;
+  }
+div.button {
+  float:right;
+  margin:6px;
+  padding:3px 10px;
+  background:#666;
+  color:white;
+  border:1px solid #999;
+  border-radius:3px;
+  text-align:center;
+  font-size:12px;
+}
+div.button:hover {
+  background:black;
+  cursor:pointer;
+}
+div.cancel {
+  background:#999;
+  margin:6px 0 6px 6px;
+}
+/* Header Tools Styles */
+/* List Wrapper Styles */
+/* Search List Styles */
+/* Torrent List Styles */
 .header_links {
   outline:0px;
   color:#666;
@@ -12,7 +70,6 @@ body {
   position:relative;
   height:24px;
   margin:5px 0 0 0;
-  display:none;
 }
 .magnet_title {
   position:absolute;
@@ -62,7 +119,6 @@ body {
   border:1px solid #a9a9a9;
   border-radius:3px;
   position:relative;
-  display:none;
 }
 .magnet-site_container {
   position:relative;
@@ -76,7 +132,7 @@ body {
 .header_item {
   position:absolute;
   top:0px;
-  height:24px;
+  height:16px;
   padding:2px 0 0 3px;
   font-family:arial;
   font-size:12px;
@@ -91,7 +147,7 @@ body {
   border-left:1px solid white
 }
 .header_quality {
-  left:300px;
+  left:308px;
   border-left:1px solid white
 }
 .header_tools {
@@ -144,7 +200,7 @@ body {
 }
 .result_quality {
   position:absolute;
-  top:4px;left:305px;
+  top:4px;left:313px;
 
 }
 .quality_icon {
@@ -179,3 +235,243 @@ body {
   border-radius:3px;
   cursor:pointer;
 }
+
+
+    .null_search {
+      text-align:center;
+      display:none;
+    }
+    .torrent_list {
+      width:430px;
+      margin:0 ;
+      padding:18px 0 0 0;
+      border:1px solid #a9a9a9;
+      border-radius:3px;
+      position:relative;
+    }
+    .torrent-list_header {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 18px;
+  background: #d8d8d8;
+  border-radius: 4px 4px 0 0; }
+  .torrent-list_name {
+  position: absolute;
+  top: 0px;
+  left: 6px;
+  font-size: 12px;
+  line-height:18px;
+  color: #666; }
+
+.torrent-list_complete {
+  position: absolute;
+  top: 0px;right: 203px;
+  font-size: 12px;
+  line-height:18px;
+  color: #666; }
+
+.torrent-list_size {
+  position: absolute;
+  top: 0px;right: 170px;
+  font-size: 12px;
+  padding-left:4px;
+  border-left:1px solid white;
+  line-height:18px;
+  color: #666; }
+
+.torrent-list_eta {
+  position: absolute;
+  top: 0px;
+  right: 108px;
+  font-size: 12px;
+  line-height:18px;
+  color: #666; }
+
+.torrent-list_quality {
+  position: absolute;
+  top: 0px;right: 80px;
+  font-size: 12px;
+  padding-left:4px;
+  border-left:1px solid white;
+  line-height:18px;
+  color: #666; }
+  
+  .torrent_tools {
+    position:relative;
+    height:24px;
+    margin:15px 0 0 0;
+    
+  }
+  .gadget_title {
+    position: absolute;
+    font-family: arial;
+    font-size: 14px;
+    font-weight: bold;
+    color: #666;
+    
+  }
+  .torrent_add-file {
+    position:absolute;
+  top:0px;right:60px;
+  height:16px;width:20px;
+  text-align:center;
+  background-image: linear-gradient(bottom, rgb(214,214,214) 0%, rgb(242,242,242) 75%);
+  background-image: -o-linear-gradient(bottom, rgb(214,214,214) 0%, rgb(242,242,242) 75%);
+  background-image: -moz-linear-gradient(bottom, rgb(214,214,214) 0%, rgb(242,242,242) 75%);
+  background-image: -webkit-linear-gradient(bottom, rgb(214,214,214) 0%, rgb(242,242,242) 75%);
+  background-image: -ms-linear-gradient(bottom, rgb(214,214,214) 0%, rgb(242,242,242) 75%);
+  border:1px solid #999;
+  border-radius:3px;
+  }
+  .torrent_add-url {
+    position:absolute;
+  top:0px;right:30px;
+  height:16px;width:20px;
+  text-align:center;
+  background-image: linear-gradient(bottom, rgb(214,214,214) 0%, rgb(242,242,242) 75%);
+  background-image: -o-linear-gradient(bottom, rgb(214,214,214) 0%, rgb(242,242,242) 75%);
+  background-image: -moz-linear-gradient(bottom, rgb(214,214,214) 0%, rgb(242,242,242) 75%);
+  background-image: -webkit-linear-gradient(bottom, rgb(214,214,214) 0%, rgb(242,242,242) 75%);
+  background-image: -ms-linear-gradient(bottom, rgb(214,214,214) 0%, rgb(242,242,242) 75%);
+  border:1px solid #999;
+  border-radius:3px;
+  }
+  .torrent_settings {
+    position:absolute;
+  top:0px;right:0px;
+  height:16px;width:20px;
+  text-align:center;
+  background-image: linear-gradient(bottom, rgb(214,214,214) 0%, rgb(242,242,242) 75%);
+  background-image: -o-linear-gradient(bottom, rgb(214,214,214) 0%, rgb(242,242,242) 75%);
+  background-image: -moz-linear-gradient(bottom, rgb(214,214,214) 0%, rgb(242,242,242) 75%);
+  background-image: -webkit-linear-gradient(bottom, rgb(214,214,214) 0%, rgb(242,242,242) 75%);
+  background-image: -ms-linear-gradient(bottom, rgb(214,214,214) 0%, rgb(242,242,242) 75%);
+  border:1px solid #999;
+  border-radius:3px;
+  }
+  .null_torrents {
+    text-align:center;font-size:12px;
+    margin:10px 0;
+    display:block;
+  }
+  .torrents {display:none}
+  .clearbits {display:none}
+  .mininova {display:none}
+  .patrick {display:none}
+  .null_search {text-align:center;font-size:12px;
+    margin:10px 0;
+    display:block;}
+  .search_meaty {display:none}
+  .alert {display:none}
+  .clearbits-search_meaty {display:none}
+  
+  .progress {
+    background: #e9e9e9;
+    position: absolute;
+    top:28px; left:0px;
+    height:12px; width:416px;
+    border:1px solid #a9a9a9;
+    border-radius:3px;
+    overflow: hidden;  
+  }
+  
+  .progress_bar {
+    background: #bada55;
+    height: 12px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    border-radius:2px;
+  }
+
+  .torrentView {
+    position: relative;
+    height: 50px;
+    font-size: 12px !important;
+    font-weight: normal !important;
+    margin:0 6px;
+  }
+
+  .quality {
+    position: absolute;
+    display: block;
+  	height: 10px;
+  	width: 10px;
+    right: 99px;
+    top: 10px;
+    border-radius: 5px;
+    border: 1px solid #999;
+  } 
+  .torrent_quality_text {
+    position:absolute;top:10px;left:322px;
+  }
+	.Leet {   background: #badaff; }
+	.Sweet {  background: #bada55; }
+	.KK {     background: yellow }
+	.Meh {    background: orange }
+	.Lame {   background: #ff4444; }
+	.Sux {    background: purple }
+
+  #torrents{
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  .torrent_name {
+    position:absolute;
+    top:10px;left:0px;
+    width: 180px;
+    font-weight: normal;
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    display: block;
+  }
+  .stop_start{
+    position:absolute;
+    right:20px;
+    top: 10px;
+    height:14px;width:14px;
+    border: none;
+  }
+  .stop_start.button_start{
+  	background:url('../img/pause_16.png') no-repeat 0px -35px;
+  	background-size:14px ;
+  	top: 10px;
+  }
+  .stop_start.button_start:hover {background:url('../img/pause_16.png') no-repeat 0px -52px;top:9px}
+  .stop_start.button_stop{
+  	background:url('../img/pause_16.png') no-repeat 0px 0px;
+  	background-size:14px ;
+  	height:14px;
+  }
+  .stop_start.button_stop:hover {background:url('../img/pause_16.png') no-repeat 0px -18px}
+  .button_remove{
+    position:absolute;
+    right:0px;
+    top: 8px;
+    height:18px;width:18px;
+    background:url('../img/icon_header_del.png') no-repeat;
+    background-size:20px;
+    border: none;
+  }
+  .button_remove:hover{
+    background:url('../img/icon_header_del-hover.png') no-repeat;
+  }
+  
+  .pct_complete, .size, .eta{
+      position: absolute;
+      top: 10px;
+  }
+  .pct_complete{
+    right: 197px;
+  }
+  .size{
+    left: 230px;
+  }
+  .eta{
+    right: 94px;;
+  }
